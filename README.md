@@ -26,12 +26,11 @@ for liczba in liczby:
         liczba_system = ''
         temp_liczba = liczba_int
         
-        # Konwersja liczby na dany system liczbowy
         while temp_liczba > 0:
             liczba_system = str(temp_liczba % system) + liczba_system
             temp_liczba //= system
         
-        # Sprawdzanie, czy liczba w tym systemie jest palindromem
+        
         if liczba_system == liczba_system[::-1]:
             licznik_palindromow_w_systemach += 1
 
