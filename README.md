@@ -1,3 +1,10 @@
+Napisz program, który wczyta liczby z pliku tekstowego liczby.txt i poda ile jest liczb, które mają unikalne cyfry.
+
+Napisz program, który wczyta liczby z pliku tekstowego liczby.txt i poda ile jest liczb palindromicznych w dwóch różnyc systemach liczbowych. Proszę rozpatrzyć systemy liczbowe o podstawie 2,3,4,5,6,7,8
+
+Napisz program, który wczyta liczby z pliku tekstowego liczby.txt i znajdzie wszystkie liczby niepotegowe
+
+
 plik = open('liczby.txt', 'r')
 liczby = plik.read().splitlines()
 plik.close()
