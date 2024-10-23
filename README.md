@@ -38,3 +38,35 @@ for liczba in liczby:
         licznik_palindromow += 1
 
 print("Liczba liczb palindromicznych w przynajmniej dwóch systemach:", licznik_palindromow)
+############
+plik = open('liczby.txt', 'r')
+liczby = plik.read().splitlines()
+plik.close()
+
+niepotegowe = []
+
+for liczba in liczby:
+    liczba_int = int(liczba)
+    
+    if liczba_int < 2:
+        niepotegowe.append(liczba_int)
+        continue
+    
+    czy_potegowa = False
+    
+    for wykladnik in range(2, liczba_int):
+        podstawa = 2
+        
+        while podstawa ** wykladnik <= liczba_int:
+            if podstawa ** wykladnik == liczba_int:
+                czy_potegowa = True
+                break
+            podstawa += 1
+        
+        if czy_potegowa:
+            break
+
+    if not czy_potegowa:
+        niepotegowe.append(liczba_int)
+
+print("Liczby niepotęgowe:", niepotegowe)
