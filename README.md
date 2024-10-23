@@ -22,7 +22,7 @@ for liczba in liczby:
     liczba_int = int(liczba)
     licznik_palindromow_w_systemach = 0
     
-    for system in systemy:
+    for podstawa in range(2,9):
         liczba_system = ''
         temp_liczba = liczba_int
         
